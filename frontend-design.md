@@ -21,6 +21,7 @@ Before writing code, determine the context. The context dictates which principle
 - Layout: predictable grid, consistent spacing scale (multiples of 4 or 8), auto-layout-friendly structures.
 - Motion: functional only. State transitions, loading indicators, feedback animations. No decorative motion.
 - Goal: the interface should feel invisible. Users accomplish tasks without noticing the UI.
+- Visual restraint: hierarchy is expressed through typographic scale and weight, not surface color. Reserve accent color for one role per screen: primary action, selected state, or single-point emphasis — not to differentiate sections or categories. Gradient backgrounds on content areas are prohibited; the neutral surface scale (white/off-white or dark neutrals) provides sufficient depth. No decorative borders: grouping is achieved through spacing first, borders only when whitespace alone is insufficient (use low-opacity strokes — rgba 6–18%, never solid opaque). Shadows communicate elevation, not aesthetics — use the lowest shadow that conveys the intended depth. Motion explains state change or navigation; avoid bounce and elastic easing except in explicitly playful, system-like interactions.
 
 **Marketing / expressive interface** (landing pages, portfolios, promotional pages, one-off campaign pages):
 - Aesthetics and differentiation move higher in priority (but Function and Accessibility remain non-negotiable).

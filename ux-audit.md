@@ -132,6 +132,15 @@ See https://www.nngroup.com/articles/ for pattern-specific references.
 - **Spacing as separation**: padding and gap are proportional to the relational importance of elements?
 - **Focal point**: one dominant element per screen? Does the eye know where to start?
 - **Action hierarchy**: primary action is the most visually prominent interactive element on screen?
+- **Overdesign signals** (for web and mobile product screens):
+  - Gradient background used as the primary hierarchy signal between sections — instead of spacing and typographic scale
+  - Accent color used in more than 2 distinct roles on the same screen
+  - Decorative borders where spacing alone would communicate grouping
+  - Multiple visual emphases stacked on the same element (bold + color + background + border simultaneously)
+  - Shadows heavier than the element's actual elevation level would justify
+  - Animation or motion on elements that did not change state
+
+  Default severity: RECOMMENDED. Escalate to IMPORTANT when the visual excess creates hierarchy ambiguity or directly competes with the primary action element.
 
 ---
 

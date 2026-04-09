@@ -85,6 +85,13 @@ These principles should be actively applied, not just referenced. Each includes 
 - Default to showing only what's needed for the current task. Advanced options, secondary settings, and edge-case configurations should be accessible but not prominent.
 - If a UI element requires a tooltip to be understood, it may be a progressive disclosure failure — the element might not belong at this level.
 
+**Visual Restraint**
+- Hierarchy runs in this order: typographic scale and weight → spatial grouping → color. Color used as the primary differentiator between sections is fragile: it fails in color-blind contexts, loses meaning at low contrast, and creates noise when overused.
+- Each decorative element must justify its existence functionally. The test: if this gradient, border, or shadow were removed, would the user's ability to understand or use the interface diminish? If no, remove it.
+- Motion has one job: communicate change. A transition that fires when nothing semantically changed is decoration. Decoration in motion is noise.
+- One accent color, one primary action, one focal point per screen. Everything else is support.
+- These principles apply to product and transactional interfaces (web, mobile app, SaaS). They do not constrain marketing, expressive, or brand-driven contexts where aesthetics lead intentionally.
+
 ---
 
 ## Structured Design Response
