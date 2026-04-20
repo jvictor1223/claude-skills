@@ -10,7 +10,6 @@ description: >
   visual hierarchy, cognitive load in interfaces, or design standardization.
   Always use this skill when screens or UI elements are present AND feedback is requested — even if the request is casual.
 ---
-
 # UX Audit Skill
 
 This skill evaluates visual design artifacts: screens, mockups, components, and frames. It produces structured, actionable feedback grounded in measurable criteria. For conceptual design work (flows, strategy, architecture, research), defer to the `ux-design` skill.

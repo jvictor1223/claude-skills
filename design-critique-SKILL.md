@@ -10,7 +10,6 @@ description: >
   This skill is the right choice when the primary deliverable is a prioritized, principle-grounded
   critique — direct and actionable, structured as a senior peer review.
 ---
-
 # Design Critique (UX Evaluation)
 
 Act as a senior UX designer giving a code review: direct, specific, and actionable — not as a judge.
@@ -94,13 +93,7 @@ Apply these lenses in the order that fits the input scope. For partial slices, a
 
 ### 4. Gestalt & Visual Design
 
-- **Alignment:** Elements align to a clear grid and to each other.
-- **Proximity:** Related items grouped by spacing. White space defines groups without extra labels or borders.
-- **Similarity:** Same function → same look. Avoid using the same style for different behaviors.
-- **Contrast:** Sufficient difference for text and hierarchy. Use contrast to create focus, not decoration.
-- **Spacing:** Consistent scale across the UI. Proportional padding and margins.
-- **Proportion:** Balanced size relationships between heading, body, and interactive elements.
-- **Closure/Continuity:** Visual flow guides the eye in the correct direction.
+Evaluate grouping, alignment, similarity, contrast, spacing proportion, and visual flow. Flag where visual structure contradicts logical structure. For contrast values and spacing token compliance, defer to `ux-audit`.
 
 ### 5. Typographic Proportion
 
@@ -120,29 +113,13 @@ Interactive elements must look interactive. Non-interactive elements must not mi
 
 ### 7. Responsive & Touch (when applicable)
 
-- Touch targets: sufficient area for finger input. Minimum 44×44px for primary actions.
-- Adequate spacing between adjacent tappable elements (≥8px).
-- Text and layouts adapt gracefully to smaller viewports. No content cut off or overlapping.
-- Hierarchy and focus preserved across breakpoints.
+Flag touch target size failures, inadequate spacing between tappable elements, and layouts that break across viewports. For exact values and mobile-specific safe-area rules, defer to `ux-audit`.
 
 ### 8. WCAG Accessibility (2.1 / 2.2)
 
-Evaluate against the four principles — Perceivable, Operable, Understandable, Robust.
+Flag visible accessibility failures in the artifact: color used as sole information carrier (1.4.1), missing or unclear focus indicators (2.4.7), inputs without visible labels (3.3.2), and custom components that likely lack name/role/value (4.1.2).
 
-**Priority criteria for visual critique:**
-
-- **1.4.1 Use of color (A):** Color is never the only means of conveying information. Error states must also use icon or text, not just red.
-- **1.4.3 Contrast minimum (AA):** Normal text ≥4.5:1. Large text (≥18px regular or ≥14px bold) ≥3:1.
-- **1.4.11 Non-text contrast (AA):** Input borders, focus rings, button outlines ≥3:1 against adjacent colors.
-- **2.4.7 Focus visible (AA):** Every interactive element has a visible focus indicator.
-- **2.5.8 Target size (AA, WCAG 2.2):** Touch/click targets ≥24×24px. Prefer ≥44×44px for primary actions.
-- **3.3.1 Error identification (A):** Errors are identified in text describing what went wrong, not just which field is highlighted.
-- **3.3.2 Labels or instructions (A):** Inputs have visible labels. Required fields and format expectations are stated before submission.
-- **4.1.2 Name, role, value (A):** Custom components (dropdowns, modals, toggles) expose name, role, and state to assistive technology.
-
-Flag violations by level: A = must fix, AA = should fix.
-
-For screenshots: flag likely violations and note what needs to be confirmed in Figma or code.
+For contrast ratios, spacing token values, and exact WCAG criterion numbers, defer to `ux-audit` — that skill owns quantitative accessibility analysis.
 
 ### 9. Information Architecture
 
@@ -156,21 +133,7 @@ For screenshots: flag likely violations and note what needs to be confirmed in F
 
 ### 10. Motion & Animation
 
-**Purpose:**
-- Functional: transitions communicate state changes (open/close, loading, success).
-- Orientation: motion helps users understand spatial relationships.
-- Feedback: micro-transitions confirm interactions.
-
-**Execution:**
-- Duration: 150–300ms for UI feedback. 300–500ms max for spatial transitions.
-- Easing: ease-out for elements entering. ease-in for elements leaving. ease-in-out for positional shifts. Never linear for anything that should feel physical.
-- Choreography: related elements move together. Avoid simultaneous competing animations.
-- Subtlety: default to understated. Reserve expressive animation for high-value moments.
-
-**Accessibility:**
-- `prefers-reduced-motion`: all non-essential animations disabled or reduced.
-- Nothing flashes more than 3 times per second (WCAG 2.3.1 A).
-- Looping animations can be paused or stopped.
+Flag animation that fires without state change (decoration), transitions that feel abrupt or sluggish, and missing `prefers-reduced-motion` consideration. For timing values and easing rules, defer to `ux-audit`.
 
 ### 11. Microinteractions
 

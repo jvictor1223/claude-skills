@@ -11,7 +11,6 @@ description: >
   When [DESIGN] is used on a conceptual or architectural request (flow, IA strategy, component spec),
   handle it directly using the Structured Design Response format in this skill.
 ---
-
 # UX Design Skill
 
 ## Scope

@@ -3,7 +3,6 @@ name: frontend-design
 description: >
   Create frontend interfaces that translate design decisions into working code. Use this skill when the user asks to build web components, pages, artifacts, or applications. Distinguishes between product interfaces (where function, consistency, and accessibility lead) and marketing/expressive interfaces (where visual impact leads). Generates production-grade code that respects the design hierarchy established in ux-design.
 ---
-
 # Frontend Design Skill
 
 This skill generates working frontend code (HTML/CSS/JS, React) from design intent. It bridges the gap between design decisions made in Figma and their implementation in code.
