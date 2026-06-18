@@ -1,0 +1,116 @@
+Prompt da apresentação
+ linkedin.com/in/jocalix
+ Slide 7
+[DEEP RESEARCH]
+Contexto do projeto: redesign do paywall do Meditopia, app de
+meditacao com nota 4,9 e 344K avaliacoes na App Store, operacao
+no mercado brasileiro. Objetivo: aumentar conversao trial-to-paid
+sem aumentar o desconto de entrada.
+
+As imagens anexadas sao os paywalls de 11 apps selecionados como
+benchmark estrategico, cada um representando um padrao distinto
+de conversao. A ultima imagem e o paywall atual do Meditopia para
+diagnostico comparativo.
+
+Conduza um discovery estruturado em cinco frentes:
+
+1. PADROES DE CONVERSAO
+   Analise as telas enviadas e identifique padroes recorrentes.
+   Schema obrigatorio por padrao:
+   ID (P01...) | Nome do padrao | Apps que usam | Dado de impacto
+   [DADO/ESTIMADO/INFERENCIA] | Aplicabilidade ao Meditopia
+   Minimo: 5 padroes. Inclua apenas padroes com evidencia visual
+   nas telas enviadas, nao padroes gerais de mercado.
+
+2. DADOS DE MERCADO
+   Pesquise apenas nestas fontes primarias:
+   RevenueCat State of Subscription Apps 2024/2025,
+   Adapty Paywall Best Practices, Nami ML conversion studies,
+   Business of Apps Mobile Subscriptions Report.
+   Schema por dado: valor | fonte completa | ano | contexto
+   Nao use "estudos mostram" ou "especialistas indicam" sem citar.
+
+3. GAPS DO MEDITOPIA
+   Compare a tela atual com os padroes identificados.
+   Schema obrigatorio por gap:
+   ID (G01...) | Severidade (Critico/Alto/Medio) | Problema
+   especifico | Evidencia [DADO/ESTIMADO/INFERENCIA] com fonte |
+   Oportunidade concreta
+   Minimo: 6 gaps. Seja especifico ao Meditopia, nao generico.
+
+4. CONTEXTO BRASILEIRO
+   Especificidades que afetam conversao de paywall no Brasil:
+   comportamento de pagamento, sensibilidade a preco, regulacao
+   de trial automatico, plataformas dominantes (iOS vs Android).
+   Apenas afirmacoes verificaveis ou marcadas como [INFERENCIA].
+
+5. RECOMENDACOES PRIORIZADAS
+   Schema obrigatorio por recomendacao:
+   ID (R01...) | Acao especifica | Gap de origem (ID) |
+   Esfoco (P/M/G) | Impacto estimado | Dado de suporte
+   Ordene por razao impacto/esfoco decrescente.
+
+GATE DE QUALIDADE (execute antes de responder):
+- Cada [DADO] tem fonte e ano identificados?
+- Cada recomendacao mapeia a pelo menos um gap pelo ID?
+- Os gaps sao especificos ao Meditopia, nao genericos?
+- Ha alguma afirmacao sem evidencia que deveria ser [INFERENCIA]?
+
+Finalize com "Limitacoes desta analise": liste o que nao foi
+possivel verificar e o que precisaria de dados internos doM editopia para confirmar. Seja especifico.
+ slide 9
+[EXEC]
+Com base nos gaps G01 a G06 identificados no discovery, gere
+3 propostas de redesign do paywall do Meditopia em HTML.
+A imagem anexada e a tela original para referencia visual.
+ 
+RESTRICOES GERAIS:
+- Largura: 390px (iPhone 14 viewport)
+- Tema roxo escuro (#1a0a2e como base), consistente com o Meditopia
+- Cada proposta: arquivo HTML independente, sem dependencias externas
+- Cada proposta resolve no maximo 4 gaps (foco, nao acumulacao)
+ 
+PROPOSTA 1: Personalizacao por Ansiedade
+Hipotese: headline personalizada por objetivo de onboarding
+aumenta identificacao e reduz abandono antes do CTA (G01).
+Elementos obrigatorios:
+- Social proof no topo: "4,9 estrelas, 344K avaliacoes" [resolve G05]
+- Headline: "Joao, seu programa para ansiedade esta pronto" [G01]
+- Trial timeline visual: Hoje / Dia 5 Lembrete / Dia 7 Plano inicia [G03]
+- Preco com framing semanal: "R$2,30/sem" [resolve G06]
+- CTA: "Comecar 7 dias gratis" [resolve G03]
+- Fine print correta referenciando o plano selecionado [resolve G04]
+Gaps resolvidos: G01, G03, G04, G05, G06
+ 
+PROPOSTA 2: Personalizacao por Sono
+Hipotese: mesmo modelo da V1, testando se o segmento "sono"
+converte em proporcao diferente de "ansiedade".
+Estrutura identica a V1, exceto:
+- Headline: "Joao, seu programa para dormir melhor esta pronto"
+- Primeiro item da timeline: "Hoje: Sleep stories liberados"
+Gaps resolvidos: G01, G03, G04, G05, G06
+ 
+PROPOSTA 3: Desconto pos-rejeicao
+Hipotese: oferta personalizada apos rejeicao recupera usuarios
+que sairiam sem assinar. Padrao observado no Blinkist e na Aura.
+Formato: bottom sheet com backdrop escuro sobre a tela do app.
+Elementos obrigatorios:
+- Handle de arrasto no topo do sheet
+- Headline: "Uma oferta feita para voce, Joao"
+- Badge ambar "40% de desconto" destacado
+- Um unico plano: anual com preco original riscado [resolve G02]
+- CTA primario: "Aproveitar 40% de desconto"
+- CTA secundario como link: "Nao, obrigado"
+Gaps resolvidos: G02
+ 
+FORMATO DO COMENTARIO NO TOPO DE CADA ARQUIVO:
+// Proposta: [nome]
+// Hipotese: [enunciado testavel]
+// Gaps resolvidos: [lista de IDs]
+// Dado de suporte: [cite o dado do discovery que justifica]
+ 
+GATE DE QUALIDADE:
+- Cada proposta testa hipotese distinta?
+- Nenhuma proposta tem mais de 4 gaps declarados?
+ 
+Entregue um unico arquivo HTML com as tres propostas. Navegacao por abas no topo: "V1 Ansiedade" | "V2 Sono" | "V3 Desconto" Apenas uma proposta visivel por vez. Transicao instantanea ao clicar na aba. Sem dependencias externas.
